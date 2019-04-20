@@ -1,0 +1,21 @@
+a = '123'
+b = 'hello, %s' % a
+c = 'hello, {%s}' % a
+d = 'hello, {!r}'.format(a)
+e = 'hello, %r' % a
+print(b)
+print(c)
+print(d)
+print(e)
+
+
+运行结果：
+hello, 123
+hello, {123}
+hello, '123'
+hello, '123'
+
+
+说明：
+%s 是将变量传到str()函数中，结果是将变量转化适合人阅读的格式
+%r 是将变量穿到repr()函数中，结果是将变量转化成适合机器阅读的格式，可以将%r后的变量理解为一个对象
